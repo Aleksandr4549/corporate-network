@@ -1,0 +1,3 @@
+[submodule "corporate-network-frontend"]
+	path = corporate-network-frontend
+	url = https://github.com/Aleksandr4549/corporate-network-frontend
