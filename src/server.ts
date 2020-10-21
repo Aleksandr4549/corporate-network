@@ -22,7 +22,7 @@ app.use(checkAuth);
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('corporate-network-frontend/build'));
 
-  app.get('*', (req, res) => {
+  app.get('*', (_, res) => {
     res.sendFile(path.join(__dirname, 'corporate-network-frontend', 'build', 'index.html'));
   });
 }
