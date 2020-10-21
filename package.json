@@ -16,7 +16,7 @@
     "cloudinary": "^1.23.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "express-body": "^6.6.1",
+    "express-body": "^1.19.0",
     "express-validator": "^6.6.1",
     "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.20",
