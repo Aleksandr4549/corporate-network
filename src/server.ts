@@ -11,11 +11,21 @@ import {registerbody} from './validations/register';
 import checkAuth from './middlewares/checkAuth';
 import multer from './core/multer';
 
+const path = require('path');
+
 const app = express();
 
 app.use(bodyParser.json());
 app.use(express.json());
 app.use(checkAuth);
+
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('corporate-network-frontend/build'));
+
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'corporate-network-frontend', 'build', 'index.html'));
+  });
+}
 
 app.get('/user', UserController.index);
 app.post('/signup', registerbody, UserController.signup);
