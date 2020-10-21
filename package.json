@@ -33,6 +33,6 @@
     "start": "node dist/server.js",
     "dev": "ts-node src/server.ts",
     "nodemon": "nodemon",
-    "heroku-postbuild": "cd corporate-network-frontend && npm install && npm run build"
+    "heroku-postbuild": "cd corporate-network-frontend && yarn install && yarn build"
   }
 }
